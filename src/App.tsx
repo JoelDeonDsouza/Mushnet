@@ -1,9 +1,12 @@
+import { Nav, SearchInput } from './components';
+
 function App() {
   return (
     <>
-     <h1>Hello world</h1>
+      <Nav />
+      <SearchInput />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
