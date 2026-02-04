@@ -40,15 +40,15 @@ export const SEARCH_ENGINES: SearchEngine[] = [
     category: 'ai',
   },
   {
-    id: 'you',
-    name: 'You.com',
-    url: 'https://you.com/search?q=',
+    id: 'bing-copilot',
+    name: 'Bing Copilot',
+    url: 'https://www.bing.com/search?q=',
     category: 'ai',
   },
   {
-    id: 'phind',
-    name: 'Phind',
-    url: 'https://www.phind.com/search?q=',
+    id: 'you',
+    name: 'You.com',
+    url: 'https://you.com/search?q=',
     category: 'ai',
   },
 ];
