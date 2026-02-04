@@ -30,10 +30,13 @@ const SearchInput = () => {
     isIncognito,
     selectedEngine,
     filteredEngines,
+    searchQuery,
+    setSearchQuery,
     setDropdownVisible,
     handleModeChange,
     handleIncognitoToggle,
     handleEngineSelect,
+    handleKeyDown,
   } = useSearchEngine();
 
   return (
@@ -43,7 +46,12 @@ const SearchInput = () => {
         <LogoText>{selectedEngine.name}</LogoText>
       </LogoBlock>
       <InputWrapper>
-        <InputField placeholder="What are you looking for?" />
+        <InputField
+          placeholder="What are you looking for?"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          onKeyDown={handleKeyDown}
+        />
         <BaseBlock>
           <TypeSearchContainer>
             <BtnWrapper
@@ -85,7 +93,7 @@ const SearchInput = () => {
               )}
             </IconWrapper>
             <IconWrapper onClick={handleIncognitoToggle}>
-              <BsIncognito size={20} color={isIncognito ? '#000' : '#57595B'} />
+              <BsIncognito size={20} color={isIncognito ? '#C40C0C' : '#57595B'} />
             </IconWrapper>
           </IconBox>
         </BaseBlock>

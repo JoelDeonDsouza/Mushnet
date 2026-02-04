@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import type { KeyboardEvent } from 'react';
 import { SEARCH_ENGINES } from '../lib/searchEngines';
 import type { SearchEngine, SearchMode } from '../types/searchEngine';
 
@@ -7,6 +8,7 @@ export const useSearchEngine = () => {
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const [isIncognito, setIsIncognito] = useState(false);
   const [selectedEngine, setSelectedEngine] = useState<SearchEngine>(SEARCH_ENGINES[0]);
+  const [searchQuery, setSearchQuery] = useState('');
 
   // Filter search engines based on active mode //
   const filteredEngines = useMemo(() => {
@@ -29,6 +31,7 @@ export const useSearchEngine = () => {
     setSelectedEngine(engines[0]);
   };
 
+  // Incog mode //
   const handleIncognitoToggle = () => {
     const newIncognitoState = !isIncognito;
     setIsIncognito(newIncognitoState);
@@ -47,15 +50,33 @@ export const useSearchEngine = () => {
     setDropdownVisible(false);
   };
 
+  // Handle re-routes //
+  const handleSearch = () => {
+    if (searchQuery.trim()) {
+      const searchUrl = `${selectedEngine.url}${encodeURIComponent(searchQuery.trim())}`;
+      window.location.href = searchUrl;
+    }
+  };
+
+  const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      handleSearch();
+    }
+  };
+
   return {
     activeBtn,
     dropdownVisible,
     isIncognito,
     selectedEngine,
     filteredEngines,
+    searchQuery,
+    setSearchQuery,
     setDropdownVisible,
     handleModeChange,
     handleIncognitoToggle,
     handleEngineSelect,
+    handleSearch,
+    handleKeyDown,
   };
 };

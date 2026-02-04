@@ -141,7 +141,9 @@ export const DropdownMenu = styled.div`
   width: 160px;
   transform: translateX(-40%);
   @media screen and (max-width: 960px) {
-    display: none;
+    transform: translateX(-50%);
+    width: 120px;
+    margin-top: 2px;
   }
 `;
 
@@ -155,6 +157,7 @@ export const DropdownItem = styled.div`
     background-color: #eeeeee;
   }
   @media screen and (max-width: 960px) {
-    padding: 10px 0;
+    padding: 10px 20px;
+    font-size: 14px;
   }
 `;
