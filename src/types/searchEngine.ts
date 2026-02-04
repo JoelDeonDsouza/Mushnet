@@ -1,8 +1,8 @@
-export type SearchEngine = {
+export interface SearchEngine {
   id: string;
   name: string;
   url: string;
   category: 'traditional' | 'privacy' | 'ai';
-  ai?: boolean;
-  privateFriendly?: boolean;
-};
+}
+
+export type SearchMode = 'search' | 'analyze';

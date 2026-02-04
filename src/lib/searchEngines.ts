@@ -1,4 +1,6 @@
-export const SEARCH_ENGINES = [
+import type { SearchEngine } from '../types/searchEngine';
+
+export const SEARCH_ENGINES: SearchEngine[] = [
   {
     id: 'google',
     name: 'Google',
@@ -11,7 +13,6 @@ export const SEARCH_ENGINES = [
     url: 'https://www.bing.com/search?q=',
     category: 'traditional',
   },
-
   // Privacy //
   {
     id: 'duckduckgo',
@@ -31,7 +32,6 @@ export const SEARCH_ENGINES = [
     url: 'https://www.ecosia.org/search?q=',
     category: 'privacy',
   },
-
   // AI Search //
   {
     id: 'perplexity',
