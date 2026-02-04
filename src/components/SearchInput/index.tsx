@@ -51,6 +51,7 @@ const SearchInput = () => {
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           onKeyDown={handleKeyDown}
+          name="search"
         />
         <BaseBlock>
           <TypeSearchContainer>
