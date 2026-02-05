@@ -37,7 +37,7 @@ Clone the project
 Go to the project directory
 
 ```bash
-  cd lena
+  cd mushnet
 ```
 
 Install dependencies
