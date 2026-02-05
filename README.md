@@ -18,8 +18,6 @@ MushNet is a privacy-focused web app that lets users choose their preferred brow
 
 ![App Screenshot](/public/demo2.png)
 
-![App Screenshot](/public/demo3.png)
-
 ### ✨ Features
 
 - **Browser Selection** – Choose the browser experience that fits your workflow
