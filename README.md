@@ -1,73 +1,55 @@
-# React + TypeScript + Vite
+# 🚀 Mushnet 🍄
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+MushNet is a privacy-focused web app that lets users choose their preferred browser and AI model, with an optional incognito mode for enhanced privacy.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+   https://mushnet.vercel.app
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Tech Stack
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+**Client:** React, Typescript, styled-components
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Screenshots
+
+![App Screenshot](/public/demo.png)
+
+![App Screenshot](/public/demo2.png)
+
+![App Screenshot](/public/demo3.png)
+
+### ✨ Features
+
+- **Browser Selection** – Choose the browser experience that fits your workflow
+- **AI Selection** – Pick from supported AI models
+- **Incognito Mode** – Use the app without storing session data or history
+- **Fast & Modern Stack** – Powered by Bun for blazing-fast installs and execution
+- **Clean UI** – Minimal, responsive, and easy to use
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/JoelDeonDsouza/Mushnet.git
+```
+
+Go to the project directory
+
+```bash
+  cd lena
+```
+
+Install dependencies
+
+```bash
+  bun install
+```
+
+Start the server
+
+```bash
+  bun start
 ```
